@@ -484,3 +484,75 @@ body {
         overflow-x: auto;
     }
 }
+
+
+
+
+/* Thêm style cho thông báo */
+.notification {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1000;
+    display: block;
+}
+
+/* Đảm bảo task-row hiển thị đúng */
+.task-row {
+    display: none;
+}
+
+.task-row.visible {
+    display: table-row;
+}
+
+/* Style cho bảng thành viên trong modal */
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.member-table th, .member-table td {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.member-table th {
+    background-color: var(--light-gray);
+    font-weight: 600;
+}
+
+.member-table .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Style cho lỗi trong form */
+.error {
+    border-color: var(--delete-color) !important;
+}
+
+/* Đảm bảo nút trong modal danh sách thành viên */
+.modal__member_list .btn-edit,
+.modal__member_list .btn-delete {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.modal__member_list .btn-edit {
+    background: var(--edit-color);
+    color: #000;
+}
+
+.modal__member_list .btn-delete {
+    background: var(--delete-color);
+    color: white;
+}
