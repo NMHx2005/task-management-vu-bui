@@ -16,7 +16,7 @@ function initializeAuth() {
 function checkAuth() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (!currentUser) {
-        window.location.href = '/index.html';
+        window.location.href = '../index.html';
         return false;
     }
     return true;
@@ -59,7 +59,7 @@ function register(email, password, name) {
 // Xử lý đăng xuất
 function logout() {
     localStorage.removeItem('currentUser');
-    window.location.href = '/index.html';
+    window.location.href = '../index.html';
 }
 
 // Khởi tạo auth khi load trang
