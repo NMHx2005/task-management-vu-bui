@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhiệm vụ</title>
+    <link rel="stylesheet" href="../assets/css/personal-tasks.css">
+    <link rel="stylesheet" href="../assets/css/project-detail.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
+</head>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <a href="./project-manager.html">
+                <h1>Quản Lý Dự Án</h1>
+            </a>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="project-detail.html">Dự Án</a></li>
+                    <li><a href="./personal-tasks.html" class="active">Nhiệm Vụ của tôi</a></li>
+                    <li><a href="login.html">Đăng Xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="task-manager-header">
+            <h1 class="page-title">Quản lý nhiệm vụ</h1>
+        </div>
+        <div class="task-filters">
+            <div class="sort-dropdown">
+                <select class="sort-btn">
+                    <option value="">Sắp xếp theo</option>
+                    <option value="start-date">Ngày bắt đầu</option>
+                    <option value="progress">Tiến độ</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm nhiệm vụ">
+            </div>
+        </div>
+
+        <section class="task-section">
+            <div class="task-title">Danh Sách Nhiệm Vụ</div>
+            <div class="task-group">
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th>Tên Nhiệm Vụ</th>
+                            <th>Độ Ưu Tiên</th>
+                            <th>Trạng Thái</th>
+                            <th>Ngày Bắt Đầu</th>
+                            <th>Hạn Chót</th>
+                            <th>Tiến độ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Nhóm To do -->
+                        <tr class="group-header collapsible" data-group="to-do">
+                            <td colspan="7">
+                                <span class="group-title">To do</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td><span class="priority-tag high">Cao</span></td>
+                            <td>
+                                <span class="process-status">
+                                    In process 
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag on-track">Đúng tiến độ</span></td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>
+                                <span class="process-status">
+                                    In process 
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td><span class="priority-tag low">Thấp</span></td>
+                            <td>
+                                <span class="process-status">
+                                    Pending
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag delayed">Trì hoãn</span></td>
+                        </tr>
+
+                        <!-- Nhóm In Progress -->
+                        <tr class="group-header collapsible collapsed" data-group="in-progress">
+                            <td colspan="7">
+                                <span class="group-title">In Progress</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row in-progress">
+                            <td>Lên lịch họp kickoff</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>
+                                <span class="process-status">
+                                    In process 
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                        </tr>
+
+                        <!-- Nhóm Pending -->
+                        <tr class="group-header collapsible collapsed" data-group="pending">
+                            <td colspan="7">
+                                <span class="group-title">Pending</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row pending">
+                            <td>Chờ duyệt thiết kế</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>
+                                <span class="process-status">
+                                    In process 
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                        </tr>
+                        <!-- Nhóm Done -->
+                        <tr class="group-header collapsible collapsed" data-group="done">
+                            <td colspan="7">
+                                <span class="group-title">Done</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row done">
+                            <td>Hoàn thành khảo sát</td>
+                            <td><span class="priority-tag low">Thấp</span></td>
+                            <td>
+                                <span class="process-status">
+                                    In process 
+                                    <img src="../assets/images/process.svg" />
+                                </span>
+                            </td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag on-track">Đúng tiến độ</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal__status">
+        <div class="modal__status-header">
+            <h2>Cập nhật trạng thái</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal__status-body">
+            Xác nhận cập nhật trạng thái nhiệm vụ
+        </div>
+        <div class="modal__status-footer">
+            <button class="cancel">Huỷ</button>
+            <button class="confirm">Xác nhận</button>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <p>© 2025 Quản Lý Dự Án Nhóm. All rights reserved.</p>
+    </footer>
+
+    <!-- Thêm script khởi tạo dữ liệu -->
+    <script src="../assets/js/init-data.js"></script>
+    <!-- Thêm script xử lý nhiệm vụ -->
+    <script src="../assets/js/personal-tasks.js"></script>
+</body>
+</html> 

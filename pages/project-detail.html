@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết dự án</title>
+    <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/project-detail.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <a href="./project-manager.html">
+                <h1>Quản Lý Dự Án</h1>
+            </a>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="project-manager.html">Dự Án</a></li>
+                    <li><a href="./personal-tasks.html">Nhiệm Vụ của tôi</a></li>
+                    <li><a href="login.html">Đăng Xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="project-detail-header">
+            <div class="project-header">
+                <div>
+                    <h1 class="project-title">Xây dựng website thương mại điện tử</h1>
+                    <p class="project-description">Dự án nhằm phát triển một nền tảng thương mại điện tử với các tính năng như giỏ hàng, thanh toán và quản lý sản phẩm.</p>
+                </div>
+            </div>
+
+            <section class="member-section">
+                <div class="member-header">
+                    <h2 class="member-title">Thành viên</h2>
+                    <button class="add-member-btn">+ Thêm thành viên</button>
+                </div>
+                <div class="member-list">
+                    <div class="member-item">
+                        <div class="member-avatar blue">AN</div>
+                        <div class="member-info">
+                            <span class="member-name">An Nguyễn</span>
+                            <span class="member-role">Project owner</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <div class="member-avatar purple">BA</div>
+                        <div class="member-info">
+                            <span class="member-name">Bách Nguyễn</span>
+                            <span class="member-role">Frontend developer</span>
+                        </div>
+                    </div>
+                    <div class="list__member">
+                        <img alt="" src="../assets/images/icon_ba_cham.png" />
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="task-header">
+            <div class="task-actions">
+                <button class="add-task-btn">+ Thêm nhiệm vụ</button>
+                <div class="task-actions-right">
+                    <div class="sort-dropdown">
+                        <select class="sort-btn">
+                            <option value="">Sắp xếp theo</option>
+                            <option value="start-date">Ngày bắt đầu</option>
+                            <option value="progress">Tiến độ</option>
+                        </select>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm nhiệm vụ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="task-section">
+            <div class="task-title">Danh Sách Nhiệm Vụ</div>
+            <div class="task-group">
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th>Tên Nhiệm Vụ</th>
+                            <th>Người Phụ Trách</th>
+                            <th>Ưu Tiên</th>
+                            <th>Ngày Bắt Đầu</th>
+                            <th>Hạn Chót</th>
+                            <th>Tiến độ</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Nhóm To do -->
+                        <tr class="group-header collapsible" data-group="to-do">
+                            <td colspan="7">
+                                <span class="group-title">To do</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag high">Cao</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag on-track">Đúng tiến độ</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="task-row to-do">
+                            <td>Soạn thảo đề cương dự án</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag low">Thấp</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag delayed">Trì hoãn</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Nhóm In Progress -->
+                        <tr class="group-header collapsible collapsed" data-group="in-progress">
+                            <td colspan="7">
+                                <span class="group-title">In Progress</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row in-progress">
+                            <td>Lên lịch họp kickoff</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Nhóm Pending -->
+                        <tr class="group-header collapsible collapsed" data-group="pending">
+                            <td colspan="7">
+                                <span class="group-title">Pending</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row pending">
+                            <td>Chờ duyệt thiết kế</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag medium">Trung bình</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag at-risk">Có rủi ro</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Nhóm Done -->
+                        <tr class="group-header collapsible collapsed" data-group="done">
+                            <td colspan="7">
+                                <span class="group-title">Done</span>
+                            </td>
+                        </tr>
+                        <tr class="task-row done">
+                            <td>Hoàn thành khảo sát</td>
+                            <td>An Nguyễn</td>
+                            <td><span class="priority-tag low">Thấp</span></td>
+                            <td>02-24</td>
+                            <td>02-27</td>
+                            <td><span class="status-tag on-track">Đúng tiến độ</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 Quản Lý Dự Án Nhóm. All rights reserved.</p>
+    </footer>
+
+
+    <div class="modal__member">
+        <div class="modal__member-header">
+            <h2>Thêm thành viên</h2>
+            <span class="close">&times;</span>
+        </div>
+        <form>
+            <div class="modal__member-body">
+                <label for="member-name">Tên thành viên</label>
+                <input name="member-name" type="text" id="member-name" class="error" placeholder="Vui lòng nhập tên thành viên mới ...">
+                <label for="member-role">Vai trò</label>
+                <input name="member-role" type="text" id="member-role" placeholder="Vai trò của thành viên">
+            </div>
+            <div class="modal__member-footer">
+                <button type="button" class="cancel">Huỷ</button>
+                <button type="submit" class="save">Lưu</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Thêm modal danh sách thành viên -->
+    <div class="modal__member_list">
+        <div class="modal__member_list-content">
+            <div class="modal__member_list-header">
+                <h2>Danh sách thành viên</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal__member_list-body">
+                <!-- Nội dung sẽ được thêm bởi JavaScript -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal__task" id="taskModal">
+        <div class="modal__task-content">
+            <div class="modal__task-header">
+                <h2>Thêm nhiệm vụ</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="addTaskForm">
+                <div class="modal__task-body">
+                    <label for="task-name">Tên nhiệm vụ</label>
+                    <input type="text" id="task-name" name="task-name" required>
+
+                    <label for="assignee">Người phụ trách</label>
+                    <select id="assignee" name="assignee" required>
+                        <option value="1">An Nguyễn</option>
+                        <option value="2">Bách Nguyễn</option>
+                    </select>
+
+                    <label for="status">Trạng thái</label>
+                    <select id="status" name="status" required>
+                        <option value="To do">To do</option>
+                        <option value="In progress">In Process</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Done">Done</option>
+                    </select>
+
+                    <label for="start-date">Ngày bắt đầu</label>
+                    <input type="date" id="start-date" name="start-date" placeholder="mm/dd/yyyy" required>
+
+                    <label for="end-date">Hạn cuối</label>
+                    <input type="date" id="end-date" name="due-date" placeholder="mm/dd/yyyy" required>
+
+                    <label for="priority">Độ ưu tiên</label>
+                    <select id="priority" name="priority" required>
+                        <option value="Thấp">Thấp</option>
+                        <option value="Trung Bình">Trung Bình</option>
+                        <option value="Cao">Cao</option>
+                    </select>
+
+                    <label for="progress">Tiến độ</label>
+                    <select id="progress" name="progress" required>
+                        <option value="Đúng tiến độ">Đúng Tiến Độ</option>
+                        <option value="Có rủi ro">Có Rủi Ro</option>
+                        <option value="Trì hoãn">Trì Hoãn</option>
+                    </select>
+                </div>
+                <div class="modal__task-footer">
+                    <button type="button" class="cancel">Hủy</button>
+                    <button type="submit" class="save">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../assets/js/product-detail.js"></script>
+    <script src="../assets/js/project-detail.js"></script>
+</body>
+</html>
