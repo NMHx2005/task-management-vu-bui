@@ -16,7 +16,7 @@ function initializeAuth() {
 function checkAuth() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (!currentUser) {
-        window.location.href = '/pages/login.html';
+        window.location.href = '/index.html';
         return false;
     }
     return true;
@@ -59,7 +59,7 @@ function register(email, password, name) {
 // Xử lý đăng xuất
 function logout() {
     localStorage.removeItem('currentUser');
-    window.location.href = '/pages/login.html';
+    window.location.href = '/index.html';
 }
 
 // Khởi tạo auth khi load trang
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Nếu đang ở trang login hoặc register thì không cần check auth
     const currentPage = window.location.pathname;
-    if (!currentPage.includes('login.html') && !currentPage.includes('register.html')) {
+    if (!currentPage.includes('index.html') && !currentPage.includes('register.html')) {
         checkAuth();
     }
 }); 

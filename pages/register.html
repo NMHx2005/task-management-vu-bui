@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng ký - Quản lý dự án</title>
     <link rel="stylesheet" href="../assets/css/auth.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
                 <div class="error-message" style="display: none; color: red; margin-bottom: 10px;"></div>
                 <button type="submit">Đăng ký</button>
             </form>
-            <p class="auth-link">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+            <p class="auth-link">Đã có tài khoản? <a href="../index.html">Đăng nhập</a></p>
         </div>
     </div>
 
@@ -53,7 +53,7 @@
             
             if (register(email, password, name)) {
                 alert('Đăng ký thành công! Vui lòng đăng nhập.');
-                window.location.href = 'login.html';
+                window.location.href = '../index.html';
             } else {
                 errorMessage.textContent = 'Email đã tồn tại';
                 errorMessage.style.display = 'block';
